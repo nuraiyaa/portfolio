@@ -1,26 +1,22 @@
-# Bilal | Software Engineer & Full-Stack Developer
+# Rishi Thakor — Portfolio
 
-Personal portfolio website for Bilal, a freelance Full-Stack Developer and Software Engineer building practical software and AI-powered solutions for real businesses. 
+Interactive portfolio matching [therishithakor.com](https://therishithakor.com/) built with the Rishi Thakor design system tokens.
 
-🌐 **Live Website:** [bilalsalmani.in](https://bilalsalmani.in/)
+## Structure
 
-## Features
-- **Premium UI/UX:** Dark mode, smooth reveal animations, and a modern aesthetic.
-- **Responsive Layout:** Carefully tailored layouts for Desktop, Tablet, and Mobile.
-- **Performance Optimized:** Uses native IntersectionObservers, React optimizations, and lazy-loading for lightning-fast speeds.
-- **SEO Ready:** Fully configured with JSON-LD, Open Graph tags, Twitter cards, robots.txt, and canonical URLs.
-- **Dynamic Content:** Showcases projects like the Biodiversity Explorer System (Pilikula Science Centre), CueCafe Pro, and more.
+- `index.html` - Homepage featuring 3D interactive doors, dynamic ability card, story & timeline, contact dialog.
+- `web-developer/` - Web development showcase with live project embeds and case studies.
+- `app-developer/` - Mobile iOS app showcase with interactive screen previews and video recordings.
+- `ui-ux-designer/` - UI/UX interactive design prototypes and case studies.
+- `graphic-designer/` - Brand identity, posters, typography, and logo systems.
+- `photographer/` - Endless panoramic photo wall with high-resolution lightbox, filter categories, and smooth inertia physics.
+- `legal/` - Privacy, disclosures, and licenses.
+- `card/` - 3D holographic ability card assets.
+- `fonts/` - Onest variable web font suite.
 
-## Tech Stack
-- React
-- Vite
-- Custom CSS Grid/Flexbox layouts
-- Vercel/Netlify Deployment Ready
+## Running Locally
 
-## Local Development
-1. Clone the repository
-2. Run `npm install` to install dependencies
-3. Run `npm run dev` to start the local development server
+Because the project is fully static with standard relative paths, you can serve it with any web server:
 
----
-*Designed and built with care. © 2026 Bilal.*
+- **Apache / XAMPP**: Place in `c:/xampp/htdocs/portfolio/` and visit `http://localhost/portfolio/`.
+- **Node.js**: Run `npx serve .` or `npx http-server -p 8080`.
