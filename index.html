@@ -29,6 +29,31 @@
 
 <script id="nurInteractiveController">
 (function() {
+  // Nav items guardian: Ensures all 7 navbar items are present
+  function enforceNavbar() {
+    var ul = document.querySelector('header.hdr nav ul.nav');
+    if (ul && (!ul.innerHTML.includes('Graphic Design') || !ul.innerHTML.includes('/app-developer/'))) {
+      var pathname = window.location.pathname;
+      var isHome = pathname === '/' || pathname === '';
+      var isWeb = pathname.includes('web-developer');
+      var isApp = pathname.includes('app-developer');
+      var isUX = pathname.includes('ui-ux-designer');
+      var isGD = pathname.includes('graphic-designer');
+
+      ul.innerHTML = '<li><a ' + (isHome ? 'aria-current="page"' : '') + ' href="/"><span>Home</span></a></li>' +
+        '<li><a ' + (isWeb ? 'aria-current="page"' : '') + ' href="/web-developer/"><span>Web Development</span></a></li>' +
+        '<li><a ' + (isApp ? 'aria-current="page"' : '') + ' href="/app-developer/"><span>App Development</span></a></li>' +
+        '<li><a ' + (isUX ? 'aria-current="page"' : '') + ' href="/ui-ux-designer/"><span>UI/UX Design</span></a></li>' +
+        '<li><a ' + (isGD ? 'aria-current="page"' : '') + ' href="/graphic-designer/"><span>Graphic Design</span></a></li>' +
+        '<li><button type="button"><span>My story</span></button></li>' +
+        '<li><button type="button"><span>Contact</span></button></li>';
+    }
+  }
+  enforceNavbar();
+  setInterval(enforceNavbar, 200);
+  window.addEventListener('DOMContentLoaded', enforceNavbar);
+  window.addEventListener('load', enforceNavbar);
+
   // A. Safety dismiss preloader
   setTimeout(function() {
     var l = document.getElementById("loader");
