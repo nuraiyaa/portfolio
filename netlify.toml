@@ -16,3 +16,15 @@
   for = "/images/*"
   [headers.values]
     Cache-Control = "public, max-age=86400"
+
+[[redirects]]
+  from = "/developer/*"
+  to = "/ui-ux-designer/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/developer"
+  to = "/ui-ux-designer/"
+  status = 301
+  force = true
