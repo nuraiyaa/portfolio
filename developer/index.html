@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<title>Freelance iOS App Developer — Nur Hossan</title>
+<title>Freelance UI/UX Designer — Nur Hossan</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>/* Onest loaded via Google Fonts */</style>
 
-<meta name="description" content="Native iOS apps and games designed and built from first sketch to deployment. Freelance app developer working remotely with businesses worldwide." />
+<meta name="description" content="Product and interface design for web and mobile: user flows, wireframes and polished UI. Remote UI/UX designer available to teams in the US and the UK." />
 <meta name="theme-color" content="#1A1818" />
 <script>if(/[?&]embed\b/.test(location.search))document.documentElement.classList.add('embed');try{if((localStorage.getItem('nur-mode') || localStorage.getItem('rishi-mode'))==='dark')document.documentElement.dataset.mode='dark'}catch(e){}</script>
 <style>
@@ -24,8 +24,8 @@
   --color-15: #FBFAF8;
   --color-1: #1A1818;
   --color-2: #5C4242;
+  --color-4: #A4552C;
   --color-8: #D5CDCA;
-  --color-4: #7A8670;
   --color-5: #7FB069;
   --color-10: #E8E4E0;
   --color-12: #F3EEEC;
@@ -82,40 +82,33 @@ h1{font-size:clamp(44px,7vw,84px);font-weight:600;letter-spacing:-.025em;line-he
 .note{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:rgba(var(--fg-rgb),.68)}
 .note::before{content:"";width:7px;height:7px;border-radius:50%;background:#7a8670}
 
-/* ---------- the phone: an iPhone turned slightly side-on ---------- */
-.card__in{--w:clamp(210px,calc((100svh - var(--nav-h,72px) - 240px) * .5),320px);--sw:calc(var(--w) * .916)}
-.stage{position:relative;perspective:1600px;perspective-origin:50% 45%;display:grid;place-items:center;padding:6px 0 34px}
-.phone{position:relative;width:var(--w);transform-style:preserve-3d;transform:rotateY(-21deg) rotateX(6deg) rotateZ(1.2deg);transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
-.card.flip .phone{transform:rotateY(21deg) rotateX(6deg) rotateZ(-1.2deg)}
-.card:hover .phone{transform:rotateY(-12deg) rotateX(3deg) rotateZ(.5deg)}
-.card.flip:hover .phone{transform:rotateY(12deg) rotateX(3deg) rotateZ(-.5deg)}
-/* titanium frame, then the black bezel, then the screen */
-.phone__body{position:relative;transform-style:preserve-3d;padding:calc(var(--w) * .012);border-radius:calc(var(--w) * .168);
-  background:linear-gradient(145deg,#e4e0db 0%,#8f8a85 22%,#5b5753 48%,#9d9893 74%,#e6e2dd 100%);
-  box-shadow:inset 0 0 0 1px rgba(255,255,255,.35),0 50px 80px -40px rgba(26,24,24,.55),0 18px 30px -18px rgba(26,24,24,.35)}
-html[data-mode="dark"] .phone__body{box-shadow:inset 0 0 0 1px rgba(255,255,255,.25),0 50px 80px -40px rgba(0,0,0,.9),0 18px 30px -18px rgba(0,0,0,.7)}
-/* the frame's thickness: an edge you see because the phone is turned */
-.phone__body::before{content:"";position:absolute;top:calc(var(--w) * .16);bottom:calc(var(--w) * .16);right:0;width:calc(var(--w) * .05);transform-origin:100% 50%;transform:rotateY(-90deg);
-  background:linear-gradient(180deg,#cfcac5,#8c8783 30%,#6d6965 70%,#b9b4af)}
-.card.flip .phone__body::before{right:auto;left:0;transform-origin:0 50%;transform:rotateY(90deg)}
-.phone__btn{position:absolute;width:calc(var(--w) * .014);border-radius:2px;background:linear-gradient(90deg,#6e6a66,#bdb8b3);transform:translateZ(-1px)}
-.phone__btn.l{left:calc(var(--w) * -.008)}.phone__btn.r{right:calc(var(--w) * -.008)}
-.phone__screen{position:relative;box-sizing:content-box;aspect-ratio:1180/2556;border:calc(var(--w) * .03) solid #050505;border-radius:calc(var(--w) * .156);overflow:hidden;background:#141414 center/cover no-repeat;transform:translateZ(.5px)}
-.phone__screen video{border-radius:calc(var(--w) * .126);position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-.phone__screen::after{content:"";position:absolute;inset:0;pointer-events:none;
-  background:linear-gradient(118deg,rgba(255,255,255,.14) 0%,rgba(255,255,255,.03) 30%,transparent 44%)}
-.island{position:absolute;left:34%;top:calc(var(--sw) * .028);width:32%;aspect-ratio:126/37;border-radius:999px;background:#000}
-.sbar{position:absolute;left:0;right:0;top:0;height:calc(var(--sw) * .15);display:flex;align-items:center;justify-content:space-between;
-  padding:0 calc(var(--sw) * .085) 0 calc(var(--sw) * .115);color:#fff;font-size:calc(var(--sw) * .043);font-weight:600;letter-spacing:-.01em;pointer-events:none}
-.sbar svg{height:calc(var(--sw) * .036);width:auto;display:block}
-.sbar span:last-child{display:flex;align-items:center;gap:calc(var(--sw) * .014)}
-.stage::after{content:"";position:absolute;left:50%;bottom:10px;width:calc(var(--w) * 1.05);height:26px;transform:translateX(-50%);border-radius:50%;
-  background:radial-gradient(closest-side,rgba(0,0,0,.3),transparent);filter:blur(7px);z-index:-1}
+/* ---------- the desktop: a slightly side-on monitor ---------- */
+.stage{position:relative;perspective:1900px;perspective-origin:50% 40%;padding:10px 0 28px}
+.mon{position:relative;transform-style:preserve-3d;transform:rotateY(-17deg) rotateX(4deg);transition:transform 1.2s cubic-bezier(.16,1,.3,1);margin-inline:auto;width:100%;max-width:720px}
+.card.flip .mon{transform:rotateY(17deg) rotateX(4deg)}
+.card:hover .mon{transform:rotateY(-12deg) rotateX(3deg)}
+.card.flip:hover .mon{transform:rotateY(12deg) rotateX(3deg)}
+.mon__body{position:relative;transform-style:preserve-3d;--mp:clamp(5px,1.3vw,11px);padding:var(--mp);border-radius:calc(var(--mp) + 8px);background:linear-gradient(160deg,#2a2828,#0d0c0c 60%);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.08),inset 0 1px 0 rgba(255,255,255,.12)}
+/* the monitor's thickness: an edge you see because it is turned */
+.mon__body::before{content:"";position:absolute;top:10px;bottom:10px;right:0;width:22px;transform-origin:100% 50%;transform:rotateY(-90deg);
+  background:linear-gradient(180deg,#bdb9b5,#8d8985 50%,#6f6b68);border-radius:0 6px 6px 0}
+.card.flip .mon__body::before{right:auto;left:0;transform-origin:0 50%;transform:rotateY(90deg)}
+.mon__screen{position:relative;aspect-ratio:16/10;border-radius:8px;overflow:hidden;background:#000;transform:translateZ(.5px)}
+.mon__screen img.page{position:absolute;left:0;top:0;width:100%;height:auto;display:block;will-change:transform;
+  transform:translate3d(0,0,0)}
+
+.mon__screen video{border-radius:inherit;position:absolute;inset:0;width:100%;height:100%;object-fit:contain!important;display:block}
+.mon__screen.vid{aspect-ratio:var(--ar,16/10)}
+.mon__screen::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(118deg,rgba(255,255,255,.16) 0%,rgba(255,255,255,.04) 28%,transparent 42%),linear-gradient(0deg,rgba(0,0,0,.12),transparent 30%)}
+.mon__neck{position:relative;width:15%;height:clamp(40px,7vw,78px);margin:-2px auto 0;transform:translateZ(-30px);
+  background:linear-gradient(90deg,#8e8a86,#d9d5d0 45%,#b7b2ad 60%,#7e7a76);clip-path:polygon(8% 0,92% 0,100% 100%,0 100%)}
+.mon__foot{width:36%;height:12px;margin:0 auto;border-radius:3px 3px 8px 8px;transform:translateZ(-30px);
+  background:linear-gradient(180deg,#e5e1dc,#a9a49f);box-shadow:0 1px 0 rgba(255,255,255,.5) inset}
+.stage::after{content:"";position:absolute;left:18%;right:18%;bottom:14px;height:26px;border-radius:50%;
+  background:radial-gradient(closest-side,rgba(0,0,0,.35),transparent);filter:blur(6px);z-index:-1}
 html[data-mode="dark"] .stage::after{background:radial-gradient(closest-side,rgba(0,0,0,.8),transparent)}
-/* the app's own icon beside its name */
-.app{display:flex;align-items:center;gap:14px;margin-bottom:22px}
-.app img{width:58px;height:58px;border-radius:13px;display:block;box-shadow:0 8px 18px -10px rgba(26,24,24,.5),0 0 0 1px rgba(var(--fg-rgb),.06)}
-.app .card__meta{margin-bottom:0}
 
 /* arriving */
 .card .card__info>*,.card .stage{transition:opacity .8s ease,transform 1s cubic-bezier(.16,1,.3,1)}
@@ -134,16 +127,15 @@ html[data-mode="dark"] .stage::after{background:radial-gradient(closest-side,rgb
   /* phones: each card fits one screen, desktop on top, the essentials below */
   .card__in{padding:16px 18px 20px;min-height:auto;gap:4px;max-height:calc(100svh - var(--nav-h,64px) - 40px)}
   .stage{order:-1;padding:4px 6% 18px}
+  .mon__neck{height:30px}
   .card__meta{margin-bottom:8px;font-size:11px}
   .card h2{font-size:26px;margin-bottom:4px}
   .card .sub{font-size:13px;margin-bottom:10px}
   .card .desc{font-size:14px;line-height:1.5;margin-bottom:14px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
   .tags{display:none}
   .live{height:44px;padding:0 18px;font-size:13px}
-  .card__in{--w:clamp(150px,calc((100svh - var(--nav-h,64px) - 370px) * .47),230px)}
-  .phone,.card.flip .phone{transform:rotateY(-14deg) rotateX(4deg) rotateZ(.6deg)}
-  .card.flip .phone__body::before{right:0;left:auto;transform-origin:100% 50%;transform:rotateY(-90deg)}
-  .app{margin-bottom:10px;gap:12px}.app img{width:42px;height:42px;border-radius:10px}
+  .mon,.card.flip .mon{transform:rotateY(-10deg) rotateX(3deg)}
+  .card.flip .mon__body::before{right:0;left:auto;transform-origin:100% 50%;transform:rotateY(-90deg)}
 }
 @media (prefers-reduced-motion:reduce){
   .glow{display:none}
@@ -324,7 +316,7 @@ html[data-mode="dark"] .skel::after{background-image:linear-gradient(100deg,#231
 .rn__in{min-width:0}
 .rn nav{min-width:0}
 </style>
-<link rel="canonical" href="https://nurhossan.netlify.app/app-developer/" />
+<link rel="canonical" href="https://nurhossan.netlify.app/ui-ux-designer/" />
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
 <meta name="author" content="Nur Hossan" />
 <link rel="icon" href="/favicon.ico" sizes="48x48" />
@@ -333,9 +325,9 @@ html[data-mode="dark"] .skel::after{background-image:linear-gradient(100deg,#231
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Nur Hossan" />
 <meta property="og:locale" content="en_US" />
-<meta property="og:url" content="https://nurhossan.netlify.app/app-developer/" />
-<meta property="og:title" content="Freelance iOS App Developer — Nur Hossan" />
-<meta property="og:description" content="Native iOS apps and games designed and built from first sketch to deployment. Freelance app developer working remotely with businesses worldwide." />
+<meta property="og:url" content="https://nurhossan.netlify.app/ui-ux-designer/" />
+<meta property="og:title" content="Freelance UI/UX Designer — Nur Hossan" />
+<meta property="og:description" content="Product and interface design for web and mobile: user flows, wireframes and polished UI. Remote UI/UX designer available to teams in the US and the UK." />
 <meta property="og:image" content="https://nurhossan.netlify.app/og.jpg?v=2" />
 <meta property="og:image:secure_url" content="https://nurhossan.netlify.app/og.jpg?v=2" />
 <meta property="og:image:type" content="image/jpeg" />
@@ -343,16 +335,16 @@ html[data-mode="dark"] .skel::after{background-image:linear-gradient(100deg,#231
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="Nur Hossan&#39;s portfolio" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Freelance iOS App Developer — Nur Hossan" />
-<meta name="twitter:description" content="Native iOS apps and games designed and built from first sketch to deployment. Freelance app developer working remotely with businesses worldwide." />
+<meta name="twitter:title" content="Freelance UI/UX Designer — Nur Hossan" />
+<meta name="twitter:description" content="Product and interface design for web and mobile: user flows, wireframes and polished UI. Remote UI/UX designer available to teams in the US and the UK." />
 <meta name="twitter:image" content="https://nurhossan.netlify.app/og.jpg?v=2" />
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://nurhossan.netlify.app/#rishi","name":"Nur Hossan","url":"https://nurhossan.netlify.app","jobTitle":"Freelance Developer, Designer and Photographer","image":"https://nurhossan.netlify.app/og.jpg?v=2","description":"Freelance web and iOS developer, UI/UX designer, graphic designer and photographer working remotely with clients worldwide.","knowsAbout":["Web development","iOS app development","UI/UX design","Graphic design","Brand identity","Photography"],"address":{"@type":"PostalAddress","addressCountry":"IN"},"knowsLanguage":["en"],"worksFor":{"@id":"https://nurhossan.netlify.app/#org"}},{"@type":"Organization","@id":"https://nurhossan.netlify.app/#org","name":"Nur Hossan — Design & Engineering","alternateName":"Nur Hossan","url":"https://nurhossan.netlify.app","image":"https://nurhossan.netlify.app/og.jpg?v=2","logo":{"@type":"ImageObject","url":"https://nurhossan.netlify.app/icon-512.png","width":512,"height":512},"founder":{"@id":"https://nurhossan.netlify.app/#rishi"},"email":"admin.nurhossan@gmail.com","contactPoint":{"@type":"ContactPoint","contactType":"sales","email":"admin.nurhossan@gmail.com","availableLanguage":"en","areaServed":["US","GB","CA","AU"]},"description":"Freelance web development, iOS app development, UI/UX design and graphic design, delivered remotely.","areaServed":[{"@type":"Country","name":"United States"},{"@type":"Country","name":"United Kingdom"},{"@type":"Country","name":"Canada"},{"@type":"Country","name":"Australia"},"Worldwide"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Web development","description":"Websites and web applications designed and built end to end."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"iOS app development","description":"Native iOS apps and games, from first sketch to the App Store."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"UI/UX design","description":"Product and interface design: user flows, wireframes and finished UI."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Graphic design","description":"Brand identity, social media creatives, posters and logos."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Photography","description":"Portrait, event and street photography."}}]}},{"@type":"WebSite","@id":"https://nurhossan.netlify.app/#site","url":"https://nurhossan.netlify.app","name":"Nur Hossan — Portfolio","publisher":{"@id":"https://nurhossan.netlify.app/#rishi"},"inLanguage":"en"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://nurhossan.netlify.app/"},{"@type":"ListItem","position":2,"name":"Freelance iOS App Developer","item":"https://nurhossan.netlify.app/app-developer/"}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://nurhossan.netlify.app/#rishi","name":"Nur Hossan","url":"https://nurhossan.netlify.app","jobTitle":"Freelance Developer, Designer and Photographer","image":"https://nurhossan.netlify.app/og.jpg?v=2","description":"Freelance web and iOS developer, UI/UX designer, graphic designer and photographer working remotely with clients worldwide.","knowsAbout":["Web development","iOS app development","UI/UX design","Graphic design","Brand identity","Photography"],"address":{"@type":"PostalAddress","addressCountry":"IN"},"knowsLanguage":["en"],"worksFor":{"@id":"https://nurhossan.netlify.app/#org"}},{"@type":"Organization","@id":"https://nurhossan.netlify.app/#org","name":"Nur Hossan — Design & Engineering","alternateName":"Nur Hossan","url":"https://nurhossan.netlify.app","image":"https://nurhossan.netlify.app/og.jpg?v=2","logo":{"@type":"ImageObject","url":"https://nurhossan.netlify.app/icon-512.png","width":512,"height":512},"founder":{"@id":"https://nurhossan.netlify.app/#rishi"},"email":"admin.nurhossan@gmail.com","contactPoint":{"@type":"ContactPoint","contactType":"sales","email":"admin.nurhossan@gmail.com","availableLanguage":"en","areaServed":["US","GB","CA","AU"]},"description":"Freelance web development, iOS app development, UI/UX design and graphic design, delivered remotely.","areaServed":[{"@type":"Country","name":"United States"},{"@type":"Country","name":"United Kingdom"},{"@type":"Country","name":"Canada"},{"@type":"Country","name":"Australia"},"Worldwide"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Web development","description":"Websites and web applications designed and built end to end."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"iOS app development","description":"Native iOS apps and games, from first sketch to the App Store."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"UI/UX design","description":"Product and interface design: user flows, wireframes and finished UI."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Graphic design","description":"Brand identity, social media creatives, posters and logos."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Photography","description":"Portrait, event and street photography."}}]}},{"@type":"WebSite","@id":"https://nurhossan.netlify.app/#site","url":"https://nurhossan.netlify.app","name":"Nur Hossan — Portfolio","publisher":{"@id":"https://nurhossan.netlify.app/#rishi"},"inLanguage":"en"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://nurhossan.netlify.app/"},{"@type":"ListItem","position":2,"name":"Freelance UI/UX Designer","item":"https://nurhossan.netlify.app/ui-ux-designer/"}]}]}</script>
 <meta name="google-site-verification" content="dB3k2roAkI1S8861shwLsjVKNyl1q-TjchYYJWrG-18" /></head>
 <body>
 <div class="glow" aria-hidden="true"></div>
 <header class="rn" id="rn">
   <div class="rn__in">
-    <nav aria-label="Primary"><ul><li><a href="/">Home</a></li><li><a href="/web-developer/">Web Development</a></li><li><a href="/app-developer/" aria-current="page">App Development</a></li><li><a href="/developer/">UI/UX Design</a></li><li><a href="/photographer/">My story</a></li><li><a href="/contact/">Contact</a></li></ul></nav>
+    <nav aria-label="Primary"><ul><li><a href="/">Home</a></li><li><a href="/web-developer/">Web Development</a></li><li><a href="/app-developer/" >App Development</a></li><li><a href="/ui-ux-designer/" aria-current="page">UI/UX Design</a></li><li><a href="/photographer/">My story</a></li><li><a href="/contact/">Contact</a></li></ul></nav>
     <div class="rn__clock" aria-label="Local time"><span>Local time</span><b data-ftime>—</b><span class="d">•</span><span class="d" data-fdate></span></div>
     <button class="rn__menu" id="rnMenu" aria-expanded="false" aria-controls="rnPanel"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span>Menu</span></button>
   </div>
@@ -361,7 +353,7 @@ html[data-mode="dark"] .skel::after{background-image:linear-gradient(100deg,#231
       <span class="rn__plbl">Menu</span>
       <button class="rn__pclose" id="rnClose" aria-label="Close menu"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
     </div>
-    <div class="rn__plist"><a href="/" class="rn__pitem">Home</a><a href="/web-developer/" class="rn__pitem">Web Development</a><a href="/app-developer/" class="rn__pitem" aria-current="page">App Development</a><a href="/developer/" class="rn__pitem">UI/UX Design</a><a href="/photographer/" class="rn__pitem">My story</a><a href="/contact/" class="rn__pitem">Contact</a></div>
+    <div class="rn__plist"><a href="/" class="rn__pitem">Home</a><a href="/web-developer/" class="rn__pitem">Web Development</a><a href="/app-developer/" class="rn__pitem" >App Development</a><a href="/ui-ux-designer/" class="rn__pitem" aria-current="page">UI/UX Design</a><a href="/photographer/" class="rn__pitem">My story</a><a href="/contact/" class="rn__pitem">Contact</a></div>
     <p class="rn__pfoot">Nur Hossan — available for new work<br>Replies within 5 hours</p>
   </div>
 </header>
@@ -369,28 +361,24 @@ html[data-mode="dark"] .skel::after{background-image:linear-gradient(100deg,#231
 <main class="wrap">
   <div class="top"><a class="chip" href="/#works">← Back to the doors</a></div>
   <section class="intro">
-    <h1>App Development</h1>
-    <div><p>iOS apps and games, designed and built end to end: from the first screen and the small interactions to the details that make an app feel at home on iPhone.</p></div>
+    <h1>UI/UX Design</h1>
+    <div><p>Interfaces researched, structured and prototyped: from user flows and wireframes to polished, interactive designs ready to build.</p></div>
   </section>
   <section class="stack" id="stack" aria-label="Projects"><!--pre-->
   <article class="card" style="--i:0" aria-labelledby="p0">
     <div class="card__in">
       <div class="card__info">
-        <div class="app"><img src="icon-expense.webp" alt="" width="58" height="58" decoding="async" loading="eager"><p class="card__meta"><span>iOS app · Finance</span></p></div>
-        <h2 id="p0">Expense Tracker</h2>
-        <p class="sub">Personal finance, organised into books</p>
-        <p class="desc">Spending is grouped into expense books such as Personal, Travel and Business, each with its own budget. Add income or an expense in a couple of taps, see the balance, spend and budget used at a glance, and search across every entry.</p>
-        <ul class="tags"><li>Budgets</li><li>Expense books</li><li>Shortcuts &amp; Back Tap</li></ul>
-        <span class="note">Screen recording on iPhone</span>
+        <p class="card__meta"><span>Product design</span></p>
+        <h2 id="p0">Cliq</h2>
+        <p class="sub">Affiliate management · self-hosted SaaS</p>
+        <p class="desc">A full affiliate platform a company runs on its own servers. Admins see revenue, commission, signups and purchases, top-promoter leaderboards and a daily chart; promoters get their own dashboard to create and track referral links. Fully white-label, so each company runs it under its own brand.</p>
+        <ul class="tags"><li>SaaS dashboard</li><li>Data visualisation</li><li>White-label</li></ul>
+        <span class="note">Admin and promoter screens, shown under three client brands</span>
       </div>
       <div class="stage" aria-hidden="true">
-        <div class="phone"><div class="phone__body">
-          <i class="phone__btn l" style="top:19%;height:4%"></i><i class="phone__btn l" style="top:26%;height:7.5%"></i><i class="phone__btn l" style="top:35%;height:7.5%"></i><i class="phone__btn r" style="top:28%;height:11%"></i>
-          <div class="phone__screen" style="background-image:url(data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAABQBQCdASoWADAAPrFOoEunJCMhqqgA4BYJaQAAPY/9OjphkIk8XGYA6eEFf3dAe9tN3gAA/varJVrewwzMIzTFLawEO29Fx1JsHinvtEM2zUFTPr13RVQd9uhJzNhx6bwOr+5hOwzYEeeMEGNNChwNt7zrkEgAAAA=)">
-            <video muted loop playsinline preload="metadata" poster="app-expense.webp" src="app-expense.mp4"></video>
-            <div class="sbar"><span>9:41</span><span><svg aria-hidden="true" focusable="false" viewBox="0 0 18 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg aria-hidden="true" focusable="false" viewBox="0 0 16 12" fill="currentColor"><path d="M8 2.2c2.3 0 4.4.9 6 2.4l1.3-1.4A10.6 10.6 0 0 0 8 .3 10.6 10.6 0 0 0 .7 3.2L2 4.6a8.7 8.7 0 0 1 6-2.4Zm0 3.8c1.3 0 2.5.5 3.4 1.3l1.3-1.4A6.8 6.8 0 0 0 8 4.1a6.8 6.8 0 0 0-4.7 1.8l1.3 1.4C5.5 6.5 6.7 6 8 6Zm0 3.7c-.6 0-1.1.2-1.5.6L8 12l1.5-1.7c-.4-.4-.9-.6-1.5-.6Z"/></svg><svg aria-hidden="true" focusable="false" viewBox="0 0 27 12" fill="none"><rect x=".5" y=".5" width="22" height="11" rx="3.2" stroke="currentColor" opacity=".4"/><rect x="2" y="2" width="19" height="8" rx="2" fill="currentColor"/><path d="M24.5 4v4c.8-.3 1.3-1.1 1.3-2s-.5-1.7-1.3-2Z" fill="currentColor" opacity=".45"/></svg></span></div><div class="island"></div>
-          </div>
-        </div></div>
+        <div class="mon"><div class="mon__body"><div class="mon__screen vid" style="--ar:1280 / 800">
+          <video muted loop playsinline preload="metadata" poster="ux-cliq.webp" src="ux-cliq.mp4" style="background:#fff;object-fit:cover"></video>
+        </div></div><div class="mon__neck"></div><div class="mon__foot"></div></div>
       </div>
     </div>
     <div class="card__dim"></div>
@@ -398,21 +386,17 @@ html[data-mode="dark"] .skel::after{background-image:linear-gradient(100deg,#231
   <article class="card flip" style="--i:1" aria-labelledby="p1">
     <div class="card__in">
       <div class="card__info">
-        <div class="app"><img src="icon-vault.webp" alt="" width="58" height="58" decoding="async" loading="lazy"><p class="card__meta"><span>iOS app · Privacy</span></p></div>
-        <h2 id="p1">Secret Vault</h2>
-        <p class="sub">A photo vault disguised as a calculator</p>
-        <p class="desc">It looks and works like an ordinary calculator. Type your secret equation and double-tap % to open a private vault: photos you import are hidden there and can be removed from your photo library.</p>
-        <ul class="tags"><li>Privacy</li><li>Equation passcode</li><li>Photos access</li></ul>
-        <span class="note">Recorded on iPhone with sample photos</span>
+        <p class="card__meta"><span>Figma prototype</span></p>
+        <h2 id="p1">Prime Hostel</h2>
+        <p class="sub">Hotel booking · web app design</p>
+        <p class="desc">A booking flow from search to reservation: location and date pickers, hotel listings with filters, a property page with gallery, facilities, reviews and a price breakdown, plus login and sign-up.</p>
+        <ul class="tags"><li>User flow</li><li>Interactive prototype</li><li>Booking UX</li></ul>
+        <span class="note">Prototype walkthrough recorded in Figma</span>
       </div>
       <div class="stage" aria-hidden="true">
-        <div class="phone"><div class="phone__body">
-          <i class="phone__btn l" style="top:19%;height:4%"></i><i class="phone__btn l" style="top:26%;height:7.5%"></i><i class="phone__btn l" style="top:35%;height:7.5%"></i><i class="phone__btn r" style="top:28%;height:11%"></i>
-          <div class="phone__screen" style="background-image:url(data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAAAwBgCdASoWADAAPpVClkmlpCIhOrzIALASiWkA0YAs2W94CsvMnPEjrZH9/8puNKKooDEk+IeuVpgAAP7y2dGMKDtWIkcS87pXM5c73fkTCwUF+DRPBtVySJ2nAkgXYpkqGTouykU4hp5cR55AAA==)">
-            <video muted loop playsinline preload="metadata" poster="app-vault.webp" src="app-vault.mp4"></video>
-            <div class="sbar"><span>9:41</span><span><svg aria-hidden="true" focusable="false" viewBox="0 0 18 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg aria-hidden="true" focusable="false" viewBox="0 0 16 12" fill="currentColor"><path d="M8 2.2c2.3 0 4.4.9 6 2.4l1.3-1.4A10.6 10.6 0 0 0 8 .3 10.6 10.6 0 0 0 .7 3.2L2 4.6a8.7 8.7 0 0 1 6-2.4Zm0 3.8c1.3 0 2.5.5 3.4 1.3l1.3-1.4A6.8 6.8 0 0 0 8 4.1a6.8 6.8 0 0 0-4.7 1.8l1.3 1.4C5.5 6.5 6.7 6 8 6Zm0 3.7c-.6 0-1.1.2-1.5.6L8 12l1.5-1.7c-.4-.4-.9-.6-1.5-.6Z"/></svg><svg aria-hidden="true" focusable="false" viewBox="0 0 27 12" fill="none"><rect x=".5" y=".5" width="22" height="11" rx="3.2" stroke="currentColor" opacity=".4"/><rect x="2" y="2" width="19" height="8" rx="2" fill="currentColor"/><path d="M24.5 4v4c.8-.3 1.3-1.1 1.3-2s-.5-1.7-1.3-2Z" fill="currentColor" opacity=".45"/></svg></span></div><div class="island"></div>
-          </div>
-        </div></div>
+        <div class="mon"><div class="mon__body"><div class="mon__screen vid" style="--ar:1280 / 800">
+          <video muted loop playsinline preload="metadata" poster="ux-1.webp" src="ux-1.mp4" style="background:#000;object-fit:cover"></video>
+        </div></div><div class="mon__neck"></div><div class="mon__foot"></div></div>
       </div>
     </div>
     <div class="card__dim"></div>
@@ -420,21 +404,17 @@ html[data-mode="dark"] .skel::after{background-image:linear-gradient(100deg,#231
   <article class="card" style="--i:2" aria-labelledby="p2">
     <div class="card__in">
       <div class="card__info">
-        <div class="app"><img src="icon-brick.webp" alt="" width="58" height="58" decoding="async" loading="lazy"><p class="card__meta"><span>iOS game · Arcade</span></p></div>
-        <h2 id="p2">Brick Breaker</h2>
-        <p class="sub">Arcade game with pixel-art levels</p>
-        <p class="desc">A fast arcade brick breaker: pixel-art levels, multi-ball power-ups that flood the screen, combos and a live score, with a pause menu and level-by-level progression.</p>
-        <ul class="tags"><li>Game design</li><li>Power-ups</li><li>Level design</li></ul>
-        <span class="note">Gameplay recorded on iPhone</span>
+        <p class="card__meta"><span>Figma prototype</span></p>
+        <h2 id="p2">WeBuildTech</h2>
+        <p class="sub">AI agency · website design</p>
+        <p class="desc">A bold, dark landing page for an AI product studio: a 3D mascot hero, service cards, cloud partners, a technology wall, case studies and a project enquiry call to action.</p>
+        <ul class="tags"><li>Landing page</li><li>Visual design</li><li>Brand look</li></ul>
+        <span class="note">Prototype walkthrough recorded in Figma</span>
       </div>
       <div class="stage" aria-hidden="true">
-        <div class="phone"><div class="phone__body">
-          <i class="phone__btn l" style="top:19%;height:4%"></i><i class="phone__btn l" style="top:26%;height:7.5%"></i><i class="phone__btn l" style="top:35%;height:7.5%"></i><i class="phone__btn r" style="top:28%;height:11%"></i>
-          <div class="phone__screen" style="background-image:url(data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAAAwBgCdASoWADAAPrFGnEmnI6KhNVQIAOAWCWQAx+Q5X7Fb2+drW7FLsX3d1xUlIStpj0XKMRUoP52gAP78ptUdXrARGOtskF8MifbUiH/I2pV9htfUcRcLEZsUP3eAJrueLZGNJKnWpRjMHdgv1VjyOxdpHawEbcckCq9I27rno3Us0eHZpDW7GUyMBuEKNr8UHt6C+GiJtKWqjfSRTnZKBO1LxxDHHMli2UNE0O2QAA==)">
-            <video muted loop playsinline preload="metadata" poster="app-brick.webp" src="app-brick.mp4"></video>
-            <div class="sbar"><span>9:41</span><span><svg aria-hidden="true" focusable="false" viewBox="0 0 18 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg aria-hidden="true" focusable="false" viewBox="0 0 16 12" fill="currentColor"><path d="M8 2.2c2.3 0 4.4.9 6 2.4l1.3-1.4A10.6 10.6 0 0 0 8 .3 10.6 10.6 0 0 0 .7 3.2L2 4.6a8.7 8.7 0 0 1 6-2.4Zm0 3.8c1.3 0 2.5.5 3.4 1.3l1.3-1.4A6.8 6.8 0 0 0 8 4.1a6.8 6.8 0 0 0-4.7 1.8l1.3 1.4C5.5 6.5 6.7 6 8 6Zm0 3.7c-.6 0-1.1.2-1.5.6L8 12l1.5-1.7c-.4-.4-.9-.6-1.5-.6Z"/></svg><svg aria-hidden="true" focusable="false" viewBox="0 0 27 12" fill="none"><rect x=".5" y=".5" width="22" height="11" rx="3.2" stroke="currentColor" opacity=".4"/><rect x="2" y="2" width="19" height="8" rx="2" fill="currentColor"/><path d="M24.5 4v4c.8-.3 1.3-1.1 1.3-2s-.5-1.7-1.3-2Z" fill="currentColor" opacity=".45"/></svg></span></div><div class="island"></div>
-          </div>
-        </div></div>
+        <div class="mon"><div class="mon__body"><div class="mon__screen vid" style="--ar:1280 / 800">
+          <video muted loop playsinline preload="metadata" poster="ux-2.webp" src="ux-2.mp4" style="background:#12082a;object-fit:cover"></video>
+        </div></div><div class="mon__neck"></div><div class="mon__foot"></div></div>
       </div>
     </div>
     <div class="card__dim"></div>
@@ -442,21 +422,35 @@ html[data-mode="dark"] .skel::after{background-image:linear-gradient(100deg,#231
   <article class="card flip" style="--i:3" aria-labelledby="p3">
     <div class="card__in">
       <div class="card__info">
-        <div class="app"><img src="icon-dice.webp" alt="" width="58" height="58" decoding="async" loading="lazy"><p class="card__meta"><span>iOS app · Utility</span></p></div>
-        <h2 id="p3">Dice</h2>
-        <p class="sub">A colourful dice roller</p>
-        <p class="desc">Roll several dice at once: each die fills its own block of colour and the total updates instantly, so a board-game night needs nothing but a phone.</p>
-        <ul class="tags"><li>Utility</li><li>Minimal UI</li><li>Tap to roll</li></ul>
-        <span class="note">Screen recording on iPhone</span>
+        <p class="card__meta"><span>Figma prototype</span></p>
+        <h2 id="p3">Jordan One Take 4</h2>
+        <p class="sub">Product page · e-commerce concept</p>
+        <p class="desc">A product page concept where each colourway flies in with smart-animate transitions, with oversized type, colour swatches, size select and add to cart.</p>
+        <ul class="tags"><li>E-commerce</li><li>Smart animate</li><li>Product showcase</li></ul>
+        <span class="note">Prototype walkthrough recorded in Figma</span>
       </div>
       <div class="stage" aria-hidden="true">
-        <div class="phone"><div class="phone__body">
-          <i class="phone__btn l" style="top:19%;height:4%"></i><i class="phone__btn l" style="top:26%;height:7.5%"></i><i class="phone__btn l" style="top:35%;height:7.5%"></i><i class="phone__btn r" style="top:28%;height:11%"></i>
-          <div class="phone__screen" style="background-image:url(data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAACQBACdASoWADAAPqlGnkmmJCMhMAqowBUJYgCDMfkgGEg4+mAlEH6d3GNpc0AA/rhzRmSQDP+chJNr/d1jZAbXbk4ynfkvNYiJnwJ5T43ypu3InS8X7SMq5QkGluq3yOIvkG7PRYsaKUYAAAA=)">
-            <video muted loop playsinline preload="metadata" poster="app-dice.webp" src="app-dice.mp4"></video>
-            <div class="sbar"><span>9:41</span><span><svg aria-hidden="true" focusable="false" viewBox="0 0 18 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg aria-hidden="true" focusable="false" viewBox="0 0 16 12" fill="currentColor"><path d="M8 2.2c2.3 0 4.4.9 6 2.4l1.3-1.4A10.6 10.6 0 0 0 8 .3 10.6 10.6 0 0 0 .7 3.2L2 4.6a8.7 8.7 0 0 1 6-2.4Zm0 3.8c1.3 0 2.5.5 3.4 1.3l1.3-1.4A6.8 6.8 0 0 0 8 4.1a6.8 6.8 0 0 0-4.7 1.8l1.3 1.4C5.5 6.5 6.7 6 8 6Zm0 3.7c-.6 0-1.1.2-1.5.6L8 12l1.5-1.7c-.4-.4-.9-.6-1.5-.6Z"/></svg><svg aria-hidden="true" focusable="false" viewBox="0 0 27 12" fill="none"><rect x=".5" y=".5" width="22" height="11" rx="3.2" stroke="currentColor" opacity=".4"/><rect x="2" y="2" width="19" height="8" rx="2" fill="currentColor"/><path d="M24.5 4v4c.8-.3 1.3-1.1 1.3-2s-.5-1.7-1.3-2Z" fill="currentColor" opacity=".45"/></svg></span></div><div class="island"></div>
-          </div>
-        </div></div>
+        <div class="mon"><div class="mon__body"><div class="mon__screen vid" style="--ar:1280 / 800">
+          <video muted loop playsinline preload="metadata" poster="ux-3.webp" src="ux-3.mp4" style="background:#fff;object-fit:cover"></video>
+        </div></div><div class="mon__neck"></div><div class="mon__foot"></div></div>
+      </div>
+    </div>
+    <div class="card__dim"></div>
+  </article>
+  <article class="card" style="--i:4" aria-labelledby="p4">
+    <div class="card__in">
+      <div class="card__info">
+        <p class="card__meta"><span>Quicko · Live</span></p>
+        <h2 id="p4">P&amp;L Page for Zerodha</h2>
+        <p class="sub">Designed and shipped · pnl.page</p>
+        <p class="desc">Designed end to end: the dark trading-terminal look, a clear hero with the product shown in context, and the sections that explain P&amp;L, tax reports and accrual summaries.</p>
+        <ul class="tags"><li>UI design</li><li>Design to build</li><li>Live product</li></ul>
+        <a class="live" href="https://pnl.page/brokers/zerodha" target="_blank" rel="noopener noreferrer">Visit live site <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      </div>
+      <div class="stage" aria-hidden="true">
+        <div class="mon"><div class="mon__body"><div class="mon__screen">
+          <img class="page" src="ux-pnl.webp" alt="P&amp;L Page for Zerodha: full-page screenshot" decoding="async" loading="lazy">
+        </div></div><div class="mon__neck"></div><div class="mon__foot"></div></div>
       </div>
     </div>
     <div class="card__dim"></div>
@@ -467,15 +461,10 @@ html[data-mode="dark"] .skel::after{background-image:linear-gradient(100deg,#231
   <div class="sf__in">
     <p class="sf__eye"><i></i>Available for new work</p>
     <h2 class="sf__h" id="sfTitle">Need something built?<span>Let's make it happen.</span></h2>
-    <p class="sf__p">I am always open to freelance opportunities, collaborations, and interesting mobile & web projects. Available for remote projects worldwide.</p>
+    <p class="sf__p">I'm available for freelance work: websites, apps, interfaces and visual content. Tell me what you need and I'll get back to you within a day.</p>
     <div class="sf__cta">
       <a class="sf__btn" href="/contact/">Say Hello <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></b></a>
       <a class="sf__ghost" href="/#works">View My Work</a>
-    </div>
-    <p class="sf__p">I'm available for freelance work: websites, apps, interfaces and visual content. Tell me what you need and I'll get back to you within a day.</p>
-    <div class="sf__cta">
-      <button class="sf__btn" data-nav="contact">Hire me <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></b></button>
-      
     </div>
     <div class="sf__cols">
       <div>
@@ -505,7 +494,38 @@ html[data-mode="dark"] .skel::after{background-image:linear-gradient(100deg,#231
           <li class="st">Chittagong, Bangladesh · BST (UTC+6)</li>
         </ul>
       </div>
-    </div></div>
+    </div>
+    <div class="sf__bot">
+      <span>© 2026 Nur Hossan · All rights reserved</span>
+      <span class="sf__legal"><a href="/privacy/">Privacy Policy</a></span>
+      <button data-nav="top">Back to top ↑</button>
+    </div>
+  </div>
+</footer>
+</div>
+<button class="totop" data-nav="top" aria-label="Back to top"><svg class="ring" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24"/></svg><svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg><span class="lbl">Back to top</span></button>
+
+<script>
+const PROJECTS = [{"kind": "Product design", "title": "Cliq", "sub": "Affiliate management · self-hosted SaaS", "desc": "A full affiliate platform a company runs on its own servers. Admins see revenue, commission, signups and purchases, top-promoter leaderboards and a daily chart; promoters get their own dashboard to create and track referral links. Fully white-label, so each company runs it under its own brand.", "tags": ["SaaS dashboard", "Data visualisation", "White-label"], "video": "ux-cliq.mp4", "ar": "1280 / 800", "poster": "ux-cliq.webp", "bg": "#fff", "fit": "cover", "note": "Admin and promoter screens, shown under three client brands"}, {"kind": "Figma prototype", "title": "Prime Hostel", "sub": "Hotel booking · web app design", "desc": "A booking flow from search to reservation: location and date pickers, hotel listings with filters, a property page with gallery, facilities, reviews and a price breakdown, plus login and sign-up.", "tags": ["User flow", "Interactive prototype", "Booking UX"], "video": "ux-1.mp4", "ar": "1280 / 800", "poster": "ux-1.webp", "bg": "#000", "fit": "cover", "note": "Prototype walkthrough recorded in Figma"}, {"kind": "Figma prototype", "title": "WeBuildTech", "sub": "AI agency · website design", "desc": "A bold, dark landing page for an AI product studio: a 3D mascot hero, service cards, cloud partners, a technology wall, case studies and a project enquiry call to action.", "tags": ["Landing page", "Visual design", "Brand look"], "video": "ux-2.mp4", "ar": "1280 / 800", "poster": "ux-2.webp", "bg": "#12082a", "fit": "cover", "note": "Prototype walkthrough recorded in Figma"}, {"kind": "Figma prototype", "title": "Jordan One Take 4", "sub": "Product page · e-commerce concept", "desc": "A product page concept where each colourway flies in with smart-animate transitions, with oversized type, colour swatches, size select and add to cart.", "tags": ["E-commerce", "Smart animate", "Product showcase"], "video": "ux-3.mp4", "ar": "1280 / 800", "poster": "ux-3.webp", "bg": "#fff", "fit": "cover", "note": "Prototype walkthrough recorded in Figma"}, {"kind": "Quicko · Live", "title": "P&L Page for Zerodha", "sub": "Designed and shipped · pnl.page", "desc": "Designed end to end: the dark trading-terminal look, a clear hero with the product shown in context, and the sections that explain P&L, tax reports and accrual summaries.", "tags": ["UI design", "Design to build", "Live product"], "url": "https://pnl.page/brokers/zerodha", "shot": "ux-pnl.webp"}];
+const ARROW = '<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>';
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const stack = document.getElementById('stack');
+if (!stack.firstElementChild) stack.innerHTML = PROJECTS.map((p, i) => `
+  <article class="card${i % 2 ? ' flip' : ''}" style="--i:${i}" aria-labelledby="p${i}">
+    <div class="card__in">
+      <div class="card__info">
+        <p class="card__meta"><span>${esc(p.kind)}</span></p>
+        <h2 id="p${i}">${esc(p.title)}</h2>
+        <p class="sub">${esc(p.sub)}</p>
+        <p class="desc">${esc(p.desc)}</p>
+        <ul class="tags">${p.tags.map(t => `<li>${esc(t)}</li>`).join('')}</ul>
+        ${p.url ? `<a class="live" href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">Visit live site ${ARROW}</a>` : `<span class="note">${esc(p.note || 'Screen recording of the build')}</span>`}
+      </div>
+      <div class="stage" aria-hidden="true">
+        <div class="mon"><div class="mon__body"><div class="mon__screen${p.ar ? ' vid' : ''}"${p.ar ? ` style="--ar:${p.ar}"` : ''}>
+          ${p.video ? `<video muted loop playsinline preload="metadata" poster="${p.poster}" src="${p.video}" style="background:${p.bg || '#000'};object-fit:${p.fit || 'contain'}"></video>`
+                    : `<img class="page" src="${p.shot}" alt="${esc(p.title)}: full-page screenshot" decoding="async" loading="${i < 1 ? 'eager' : 'lazy'}">`}
+        </div></div><div class="mon__neck"></div><div class="mon__foot"></div></div>
       </div>
     </div>
     <div class="card__dim"></div>
@@ -513,51 +533,9 @@ html[data-mode="dark"] .skel::after{background-image:linear-gradient(100deg,#231
 
 const cards = [...stack.querySelectorAll('.card')];
 // a recording's screen takes the recording's own shape, so nothing is cropped or letterboxed
-/* Recordings play one at a time, and are plain videos: a real source, the browser's own poster and
-   metadata preload, exactly like the UI/UX page. Safari draws its own still from the poster, so
-   nothing has to be filled in by script before a screen can show a picture. Phones decode only a
-   few videos at once, so only the screen being looked at plays and the rest are paused. */
-const VIDS = cards.map(c => {
-  const v = c.querySelector('video'); if (!v) return null;
-  const scr = v.parentElement; scr.classList.add('vid');
-  const o = { c, v, scr, armed: false, failed: false };
-  const shape = () => { if (v.videoWidth) scr.style.setProperty('--ar', v.videoWidth + ' / ' + v.videoHeight); };
-  if (v.readyState >= 1) shape(); else v.addEventListener('loadedmetadata', shape, { once: true });
-  v.addEventListener('error', () => { o.failed = true; });      // the poster simply stays
-  return o;
-}).filter(Boolean);
-function arm(o){ o.armed = true; }
-function release(o){ o.armed = false; try { o.v.pause(); } catch (e) {} }
-let activeVid = null;
-function pickVideo(){
-  if (!window.__live){ VIDS.forEach(release); activeVid = null; return; }
-  // Which screen is the person actually looking at? Measure how much of each screen is
-  // on display (cards stack over one another, so a screen stops where the next card starts).
-  // Anything showing most of itself is a real candidate, and of those the one nearest the
-  // middle of the window wins, so a card just sliding in at the bottom cannot steal it.
-  const seen = [];
-  for (const o of VIDS){
-    if (o.failed || !o.c.classList.contains('on')) continue;
-    const r = o.scr.getBoundingClientRect();
-    if (r.height < 1) continue;
-    let top = Math.max(r.top, 0), bot = Math.min(r.bottom, innerHeight);
-    const i = cards.indexOf(o.c);
-    for (let k = i + 1; k < cards.length; k++){
-      const n = cards[k].getBoundingClientRect();
-      if (n.top < bot) bot = Math.min(bot, n.top);
-    }
-    const area = Math.max(0, bot - top);
-    if (area < 40) continue;
-    seen.push({ o, area, frac: area / r.height, dist: Math.abs((top + bot) / 2 - innerHeight / 2) });
-  }
-  let best = null;
-  const solid = seen.filter(x => x.frac >= 0.4);
-  if (solid.length) best = solid.sort((a, b) => a.dist - b.dist)[0].o;
-  else if (seen.length) best = seen.sort((a, b) => b.area - a.area)[0].o;
-  if (best !== activeVid){ VIDS.forEach(o => { if (o !== best) release(o); }); activeVid = best; }
-  if (best){ arm(best); best.v.play().catch(() => {}); }
-}
-window.__pickVideo = pickVideo;
+cards.forEach(c => { const v = c.querySelector('video'); if (!v) return; const scr = v.parentElement; scr.classList.add('vid');
+  const set = () => { if (v.videoWidth) scr.style.setProperty('--ar', v.videoWidth + ' / ' + v.videoHeight); };
+  if (v.readyState >= 1) set(); else v.addEventListener('loadedmetadata', set, { once: true }); });
 // each live page scrolls itself top to bottom and back on its screen
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 // inside the home page the room is loaded early, out of sight: nothing plays until you have walked in and it has faded up
@@ -565,7 +543,7 @@ window.__live = !document.documentElement.classList.contains('embed');
 window.__restartAll = () => {};
 const SPEED = 230, REST = 1100;           // screen pixels a second, pause at each end (ms)
 const shots = cards.map(c => {
-  const img = c.querySelector('img.page'), scr = c.querySelector('.phone__screen'); if (!img) return null;
+  const img = c.querySelector('img.page'), scr = c.querySelector('.mon__screen'); if (!img) return null;
   const s = { c, img, scr, pos: 0, dist: 0, dir: 1, wait: REST, held: false };
   const measure = () => { s.dist = Math.max(0, img.offsetHeight - scr.clientHeight); s.pos = Math.min(s.pos, s.dist); paint(s); };
   if (img.complete && img.naturalWidth) measure(); else img.addEventListener('load', measure, { once: true });
@@ -576,7 +554,7 @@ function paint(s){ s.img.style.transform = `translate3d(0,${-s.pos.toFixed(1)}px
 addEventListener('resize', () => shots.forEach(s => s.measure()));
 // once a screen has been completely out of sight (scrolled away, or fully covered by the card stacked over it),
 // it starts again from the top of its page the next time it shows
-const screens = cards.map(c => ({ c, scr: c.querySelector('.phone__screen'), hidden: true, s: shots.find(x => x.c === c), v: c.querySelector('video') }));
+const screens = cards.map(c => ({ c, scr: c.querySelector('.mon__screen'), hidden: true, s: shots.find(x => x.c === c), v: c.querySelector('video') }));
 function restart(o){
   if (o.s){ o.s.pos = 0; o.s.dir = 1; o.s.wait = REST; paint(o.s); }
   if (o.v){ try { o.v.currentTime = 0; } catch (err) {} }
@@ -588,12 +566,11 @@ function checkHidden(){
     if (!hidden) for (let k = i + 1; k < cards.length; k++){ const n = cards[k].getBoundingClientRect(); if (n.top <= r.top + 1 && n.bottom >= r.bottom - 1){ hidden = true; break; } }
     if (hidden && !o.hidden) restart(o);
     o.hidden = hidden;
-    // which recording plays is decided in one place, by pickVideo()
+    if (o.v){ if (hidden) o.v.pause(); else if (o.c.classList.contains('on') && window.__live) o.v.play().catch(() => {}); }
     if (o.s) o.s.covered = hidden;
   });
-  window.__pickVideo?.();
 }
-window.__restartAll = () => { screens.forEach(restart); VIDS.forEach(release); activeVid = null; };
+window.__restartAll = () => { screens.forEach(o => { restart(o); if (o.v) o.v.pause(); }); };
 addEventListener('scroll', checkHidden, { passive: true }); addEventListener('resize', checkHidden);
 let lastT = 0;
 function run(t){
@@ -617,7 +594,7 @@ checkHidden();
 const io = new IntersectionObserver(es => es.forEach(e => {
   const c = e.target; c.classList.toggle('on', e.isIntersecting);
   if (e.isIntersecting) c.classList.add('seen');
-  window.__pickVideo?.();
+  const v = c.querySelector('video'); if (v){ if (e.isIntersecting && window.__live) v.play().catch(() => {}); else v.pause(); }
 }), { threshold: .25 });
 cards.forEach(c => io.observe(c));
 // stacking: as the next card slides over, the one beneath settles back a little
@@ -637,7 +614,7 @@ if (!reduced){ addEventListener('scroll', () => { if (!ticking){ ticking = true;
 (() => {
   const root = document.documentElement, EMBED = root.classList.contains('embed');
   if (!EMBED) return;
-  const back = [...document.querySelectorAll('a[href="/#works"]')];
+  const back = [...document.querySelectorAll('a[href="../#works"]')];
   back.forEach(b => b.addEventListener('click', e => { e.preventDefault(); parent.postMessage({ wall: 'close' }, location.origin === 'null' ? '*' : location.origin); }));
   addEventListener('keydown', e => { if (e.key === 'Escape') parent.postMessage({ wall: 'close' }, location.origin === 'null' ? '*' : location.origin); });
   addEventListener('message', e => {
@@ -645,7 +622,7 @@ if (!reduced){ addEventListener('scroll', () => { if (!ticking){ ticking = true;
     const m = e.data || {};
     if (m.wall === 'enter'){ root.classList.remove('out'); scrollTo(0, 0); window.__restartAll(); requestAnimationFrame(() => root.classList.add('in'));
       clearTimeout(window.__liveT); window.__liveT = setTimeout(() => { window.__live = true; checkHidden(); dispatchEvent(new Event('scroll')); }, 650); }
-    if (m.wall === 'exit'){ clearTimeout(window.__liveT); window.__live = false; root.classList.add('out'); root.classList.remove('in'); window.__pickVideo?.(); }   // __live is false now, so every decoder is handed back
+    if (m.wall === 'exit'){ clearTimeout(window.__liveT); window.__live = false; root.classList.add('out'); root.classList.remove('in'); document.querySelectorAll('video').forEach(v => v.pause()); }
     if (m.wall === 'reset'){ root.classList.remove('out', 'in'); }
     if (m.wall === 'mode'){ if (m.mode === 'dark') root.dataset.mode = 'dark'; else delete root.dataset.mode; }
   });
@@ -777,16 +754,17 @@ if (!reduced){ addEventListener('scroll', () => { if (!ticking){ ticking = true;
 <script>
 (() => {
   const root = document.documentElement, EMBED = root.classList.contains('embed');
+  const HOME = '../#works'.replace(/#works$/, '');
+  const SLUGS = ["web-developer", "app-developer", "ui-ux-designer", "graphic-designer", "photographer"];
   const HOME = '/';
   const go = to => {
     if (to === 'top'){ scrollTo({ top: 0, behavior: 'smooth' }); return; }
-    if (EMBED){ parent.postMessage({ wall: 'go', to }, location.origin === 'null' ? '*' : location.origin); return; }
     if (to === 'home') location.href = '/';
     else if (to === 'about') location.href = '/photographer/';
     else if (to === 'contact') location.href = '/contact/';
     else if (to === 'door:0') location.href = '/web-developer/';
     else if (to === 'door:1') location.href = '/app-developer/';
-    else if (to === 'door:2') location.href = '/developer/';
+    else if (to === 'door:2') location.href = '/ui-ux-designer/';
     else if (to === 'door:3') location.href = '/photographer/';
     else if (to.startsWith('door:')) location.href = '/web-developer/';
   };
