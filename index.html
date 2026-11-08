@@ -35,6 +35,12 @@
   // --- 0. DYNAMIC STYLES INJECTION ---
   if (!document.getElementById("nurDynamicStyles")) {
     var sty = document.createElement("style");
+    if (!document.querySelector('link[rel="manifest"]')) {
+      var mf = document.createElement('link');
+      mf.rel = 'manifest';
+      mf.href = '/site.webmanifest';
+      document.head.appendChild(mf);
+    }
     sty.id = "nurDynamicStyles";
     sty.textContent = `
       .fig, #fig { opacity: 1 !important; visibility: visible !important; display: block !important; }
